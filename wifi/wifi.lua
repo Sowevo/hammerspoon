@@ -32,7 +32,7 @@ function ssidChangedCallback() -- 回调
     if (ssid ~= nil) then
         -- 与之前的不一致(避免wifi断开重连重复触发动作)
         if (ssid ~= lastSSID) then
-            if (ssid == 'OoO' or ssid == 'nancal') then
+            if (ssid == 'OoO-5G' or ssid == 'OoO' or ssid == 'nancal') then
                 hs.notify.new({title="网络切换", informativeText="网络切换到公司,开启Clash"}):send() -- 发出通知
                 hs.audiodevice.defaultOutputDevice():setVolume(0) -- 在公司关掉扬声器
                 wifiLogin()
